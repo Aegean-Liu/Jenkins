@@ -1,4 +1,5 @@
 node('slave'){
+    checkout scm
     container('dind-kubectl'){
         stage('deploy'){
             sh 'ls'
